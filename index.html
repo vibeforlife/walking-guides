@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oʻahu Walking Guide</title>
+  <link rel="icon" href="icons/icon-192.png">
+
+  <!-- Leaflet (online) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <style>
+    :root{--bg:#0F172A;--text:#e8eefc;--muted:#a9b7d6;--accent:#7dd3fc;--accent2:#34d399;--danger:#fb7185;--border:rgba(255,255,255,.10);--shadow:0 10px 30px rgba(0,0,0,.35);--radius:18px;--radius2:14px;--chip:rgba(125,211,252,.14)}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1100px 600px at 20% 10%, rgba(125,211,252,.16), transparent 60%),radial-gradient(900px 500px at 85% 35%, rgba(52,211,153,.12), transparent 60%),var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.35}
+    header{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(11,18,32,.72);backdrop-filter:blur(10px);z-index:5}
+    .brand{display:flex;align-items:center;gap:12px}
+    .dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(180deg,var(--accent),var(--accent2));box-shadow:0 0 0 5px rgba(125,211,252,.12)}
+    h1{font-size:16px;margin:0}
+    .sub{font-size:12px;color:var(--muted);margin-top:2px}
+    .top-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+    .pill,.select{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:rgba(18,31,56,.55);padding:8px 10px;border-radius:999px;color:var(--text);font-size:12px;box-shadow:var(--shadow);user-select:none}
+    select{background:transparent;color:var(--text);border:none;outline:none;font-size:12px;max-width:260px}
+    .wrap{display:grid;grid-template-columns:420px 1fr;min-height:calc((var(--vh, 1vh) * 100) - 62px)}
+    aside{border-right:1px solid var(--border);background:rgba(15,26,46,.55);backdrop-filter:blur(10px);padding:14px;overflow:auto}
+    main{padding:14px}
+    #map{height:calc((var(--vh, 1vh) * 100) - 62px - 28px);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden}
+    .card{background:rgba(18,31,56,.55);border:1px solid var(--border);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);margin-bottom:14px}
+    .title{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+    .title h2{margin:0;font-size:14px}
+    .small{color:var(--muted);font-size:12px;margin-top:6px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:10px}
+    .stop-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .stop{border:1px solid var(--border);border-radius:var(--radius2);background:rgba(18,31,56,.45);padding:12px;box-shadow:var(--shadow);cursor:pointer;transition:transform .08s ease,border-color .08s ease,background .08s ease}
+    .stop:hover{transform:translateY(-1px);border-color:rgba(125,211,252,.35)}
+    .stop.active{border-color:rgba(52,211,153,.55);background:rgba(18,31,56,.65)}
+    .stop-top{display:flex;gap:10px;align-items:center}
+    .num{width:26px;height:26px;border-radius:11px;display:grid;place-items:center;background:rgba(125,211,252,.14);border:1px solid rgba(125,211,252,.25);font-weight:900}
+    .stop h3{margin:0;font-size:13px}
+    .meta{color:var(--muted);font-size:12px;margin-top:6px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{font-size:11px;padding:5px 8px;border-radius:999px;border:1px solid rgba(125,211,252,.25);background:var(--chip)}
+    .chip.food{border-color:rgba(52,211,153,.35);background:rgba(52,211,153,.12)}
+    .chip.serious{border-color:rgba(251,113,133,.35);background:rgba(251,113,133,.10)}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    button{border:1px solid var(--border);background:rgba(18,31,56,.75);color:var(--text);padding:10px 12px;border-radius:14px;cursor:pointer;box-shadow:var(--shadow);font-weight:900;font-size:12px}
+    button.secondary{background:rgba(14,26,48,.7)}
+    button.danger{border-color:rgba(251,113,133,.35)}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    .now{margin-top:12px;border:1px solid var(--border);border-radius:var(--radius2);background:rgba(18,31,56,.40);padding:12px}
+    .now-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}
+    .status{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}
+    .pulse{width:8px;height:8px;border-radius:999px;background:var(--accent2);box-shadow:0 0 0 6px rgba(52,211,153,.10);opacity:0}
+    .pulse.on{opacity:1;animation:ping 1.2s infinite}
+    @keyframes ping{0%{transform:scale(1);opacity:1}100%{transform:scale(1.8);opacity:0}}
+    .content{white-space:pre-wrap;font-size:13px;margin-top:8px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:11px;border:1px solid var(--border);padding:2px 6px;border-radius:8px;background:rgba(0,0,0,.18);color:var(--text)}
+  
+    /* Mobile layout fix: stack sidebar and map */
+    @media (max-width: 900px){
+      .wrap{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        min-height: calc((var(--vh, 1vh) * 100) - 62px);
+      }
+
+      aside{
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        max-height: 52vh;
+        overflow: auto;
+      }
+
+      main{ padding: 10px; }
+
+      #map{
+        height: 45vh;      /* give the map a visible height */
+        min-height: 320px; /* keeps it usable on small phones */
+      }
+    }
+
+  
+    /* Settings modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:50;padding:18px}
+    .modal-backdrop.open{display:flex}
+    .modal{width:min(680px,100%);max-height:min(82vh,720px);overflow:auto;border:1px solid var(--border);background:rgba(18,31,56,.92);border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.55);padding:16px}
+    .modal h2{margin:0 0 10px 0;font-size:16px}
+    .modal .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .modal .field{border:1px solid var(--border);border-radius:16px;padding:12px;background:rgba(11,18,32,.45)}
+    .modal .field .label{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .modal .field select{width:100%;padding:8px 10px;border-radius:12px;border:1px solid var(--border);background:rgba(18,31,56,.6);color:var(--text);outline:none}
+    .modal .footer{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+    .kbdpill{display:inline-flex;gap:6px;align-items:center;flex-wrap:wrap}
+    .kbdchip{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:11px;border:1px solid var(--border);padding:2px 6px;border-radius:8px;background:rgba(0,0,0,.18);color:var(--text)}
+    @media (max-width: 520px){ .modal .grid{grid-template-columns:1fr} }
+
+  
+    /* Toast */
+    .toast{
+      position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
+      background:rgba(15,23,42,.92);
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--text);
+      padding:10px 12px;border-radius:14px;
+      box-shadow:0 18px 45px rgba(0,0,0,.45);
+      max-width:min(92vw,520px);
+      display:none;z-index:80;
+      font-size:14px;
+    }
+    .toast.show{display:block}
+    .toast button{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:var(--text)}
+    .toast button:hover{background:rgba(255,255,255,.10)}
+
+  
+    /* Offline map fallback (static SVG) */
+    #offlineMapWrap{
+      position:absolute;inset:0;
+      display:none;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:linear-gradient(180deg, rgba(15,23,42,.92), rgba(15,23,42,.78));
+      overflow:hidden;
+    }
+    #offlineMapWrap.show{display:block}
+    #offlineMapSvg{width:100%;height:100%}
+    .offlineBadge{
+      position:absolute;top:12px;left:12px;
+      font-size:12px;color:var(--text);
+      padding:6px 10px;border-radius:999px;
+      background:rgba(0,0,0,.25);
+      border:1px solid rgba(255,255,255,.12);
+      z-index:2;
+    }
+
+  
+.arrivalCard{
+  position:fixed;inset:0;
+  background:rgba(15,23,42,.94);
+  display:none;align-items:center;justify-content:center;
+  z-index:90;text-align:center;
+}
+.arrivalCard.show{display:flex}
+.arrivalInner{
+  max-width:520px;padding:24px;
+}
+.arrivalInner h2{margin-bottom:12px}
+.arrivalInner p{font-size:18px;line-height:1.4}
+.subtle{opacity:.7;font-size:14px}
+
+/* Memories thumbnails + share */
+.memRow{display:flex;gap:12px;align-items:stretch}
+.memThumb{width:110px;min-width:110px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.memThumb svg{width:100%;height:100%}
+@media (max-width: 520px){
+  .memThumb{width:86px;min-width:86px}
+}
+/* Settings modal mobile fixes */
+#settingsBackdrop{
+  position:fixed;
+  inset:0;
+  z-index:120;
+  background:rgba(0,0,0,.45);
+}
+#settingsModal{
+  max-height: min(78vh, 720px);
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+#settingsModal .header{
+  position: sticky;
+  top: 0;
+  background: rgba(2,6,23,.92);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+#settingsModal .footer{
+  position: sticky;
+  bottom: 0;
+  background: rgba(2,6,23,.92);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  padding-top: 10px;
+}
+@media (max-width: 520px){
+  #settingsModal{
+    width: min(92vw, 560px);
+    max-height: 82vh;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="dot"></div>
+    <div>
+      <h1 style="font-weight:700;letter-spacing:.3px">Stroll Walking Guide</h1>
+      <div class="sub">Every place has a story</div>
+    </div>
+  </div>
+
+  
+  <div class="top-actions" style="flex-direction:column;align-items:flex-start;gap:10px">
+    <div class="select"><span>City</span>
+      <input id="citySearch" list="cityList" placeholder="Search city…" style="min-width:160px"/>
+      <datalist id="cityList"></datalist>
+    </div>
+    <div class="select"><span>Tour</span><select id="routeSelect"></select></div>
+    <button id="btnSettings" class="secondary" style="border-radius:999px;padding:8px 12px">⚙️ Settings</button>
+  </div>
+</header>
+
+
+<div class="wrap">
+  <aside>
+    <div class="card">
+      <div class="title">
+        <div>
+          <h2 id="routeTitle">Loading…</h2>
+          <div class="small" id="routeDesc"></div>
+        </div>
+        <div class="pill" id="distancePill">~— km</div>
+      </div>
+
+      <div class="row">
+        <div class="pill"><input id="foodOnly" type="checkbox" style="transform: translateY(1px)"/> <label for="foodOnly" style="cursor:pointer">cheap-eats stops only</label></div>
+      </div>
+
+      <div class="controls">
+        <button id="btnPrev" class="secondary">◀ Prev</button>
+        <button id="btnStartTour" class="secondary" title="Start tour: unlock audio + enable Walk Mode">Start Tour</button>
+        <button id="btnSaveMoment" class="secondary" title="Save this stop to Memories">★ Save moment</button>
+        <button id="btnPlay">▶ Play</button>
+        <button id="btnPause" class="secondary" disabled>⏸ Pause</button>
+        <button id="btnStop" class="danger" disabled>⏹ Stop</button>
+        <button id="btnNext" class="secondary">Next ▶</button>
+      </div>
+
+      <div class="now">
+        <div class="now-title">
+          <strong id="nowTitle">Select a stop</strong>
+          <div class="status"><span class="pulse" id="pulse"></span><span id="nowStatus">Idle</span></div>
+        </div>
+        <div class="content" id="nowText">Pick a stop. I’ll do the talking — you do the strolling.</div>
+        <div class="meta" id="etaHint"></div>
+      </div>
+
+      <div class="stop-list" id="stopList"></div>
+    </div>
+  </aside>
+
+  <main><div id="mapWrap" style="position:relative">
+        <div id="map"></div>
+        <div id="offlineMapWrap" aria-hidden="true">
+          <div class="offlineBadge">Offline map • ETA</div>
+          <svg id="offlineMapSvg" viewBox="0 0 1000 650" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+      </div></main>
+</div>
+
+<script src="./app.js"></script>
+
+<script>
+  // Mobile viewport height fix (iOS Safari + Android Chrome address bar behavior)
+  function setVh(){
+    document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+  }
+  window.addEventListener('resize', setVh);
+  setVh();
+</script>
+
+
+<script>
+  // Offline support (UI + routes + scripts). Map tiles still require internet.
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", async () => {
+      try {
+        await navigator.serviceWorker.register("./sw.js");
+      } catch (e) {}
+    });
+
+    // If the new SW takes control after refresh, reflect it
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      const el = document.getElementById("offlineReadyPill");
+      if (el) el.textContent = "offline: ready ✓";
+    });
+  }
+</script>
+
+
+<!-- Settings Modal -->
+<div class="modal-backdrop" id="settingsBackdrop" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+    <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+      <h2 id="settingsTitle">Settings</h2>
+      <button id="btnCloseSettings" class="secondary" style="border-radius:999px;padding:8px 12px">✕</button>
+    </div>
+
+    <div class="grid">
+      <div class="field">
+        <div class="label">Audio</div>
+        <select id="audioMode">
+          <option value="tts" selected>TTS only</option>
+          <option value="auto">Auto (Pack → TTS)</option>
+          <option value="pack" hidden>Offline Pack only</option>
+        </select>
+        <div class="small" style="margin-top:8px">Tip: phones usually require you to tap Play before audio starts.</div>
+      </div>
+
+      <div class="field">
+        <div class="label">Voice (default: Samantha en-US if available)</div>
+        <select id="voiceSelect"></select>
+        <div class="small" style="margin-top:8px">If Samantha isn’t available (common on Android), we’ll pick the first English voice.</div>
+      </div>
+
+      <div class="field">
+        <div class="label">Speed</div>
+        <select id="rateSelect">
+          <option value="0.9">0.9×</option><option value="1.0" selected>1.0×</option><option value="1.1">1.1×</option><option value="1.2">1.2×</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <div class="label">Offline status</div>
+        <div class="pill" id="offlineReadyPill" style="box-shadow:none;margin-bottom:10px">offline: preparing…</div>
+        <div class="pill" id="offlinePill" style="box-shadow:none">offline pack: checking…</div>
+        <div class="small" style="margin-top:10px">UI + routes + scripts are cached for offline after first load. Map tiles still need internet.</div>
+      </div>
+    </div>
+
+    
+      <div class="field">
+        <div class="label">Offline packs</div>
+        <div class="small" style="margin-bottom:10px">Download the selected tour so routes + narration work with no signal. (Map tiles still need internet.)</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <button id="btnDownloadTour">Download this tour</button>
+          <button id="btnRemoveTour" class="secondary">Remove offline copy</button>
+          <span class="pill" id="packPill" style="box-shadow:none">pack: none</span>
+        </div>
+        <div class="small" id="packProgress" style="margin-top:10px"></div>
+      </div>
+
+      <div class="field">
+        <div class="label">Walk Mode</div>
+        <div class="small" style="margin-bottom:10px">Auto-advance and play when you get close to the next stop.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <select id="walkRadius">
+            <option value="40">40 m</option>
+            <option value="60" selected>60 m</option>
+            <option value="90">90 m</option>
+            <option value="120">120 m</option>
+          </select>
+          <select id="walkTarget">
+            <option value="next" selected>Trigger next stop</option>
+            <option value="current">Trigger current stop</option>
+          </select>
+          <select id="walkSpeed">
+            <option value="1.1">Slow</option>
+            <option value="1.4" selected>Normal</option>
+            <option value="1.7">Fast</option>
+          </select>
+          <select id="offRouteThreshold">
+            <option value="60">Off-route: 60 m</option>
+            <option value="90" selected>Off-route: 90 m</option>
+            <option value="130">Off-route: 130 m</option>
+          </select>
+          <select id="walkCooldown">
+            <option value="20">20 s cooldown</option>
+            <option value="35" selected>35 s cooldown</option>
+            <option value="60">60 s cooldown</option>
+          </select>
+        </div>
+        <div class="pill" style="box-shadow:none;margin-top:10px"><input id="batterySaver" type="checkbox" style="transform: translateY(1px)"/> <label for="batterySaver" style="cursor:pointer">battery saver (less GPS)</label></div>
+        <div class="small" style="margin-top:10px">Tip: on mobile, tap Play once to “unlock” audio.</div>
+      </div>
+
+
+    <div class="footer">
+      <div class="field" style="flex:1">
+        <div class="label">Keyboard shortcuts (desktop)</div>
+        <div class="kbdpill">
+          <span class="kbdchip">J</span> prev
+          <span class="kbdchip">K</span> next
+          <span class="kbdchip">Space</span> play/pause
+          <span class="kbdchip">S</span> stop
+        </div>
+      </div>
+<div class="field">
+  <div class="label">Ambient sound</div>
+  <div class="small" style="margin-bottom:10px">Subtle background ambience. Defaults to very low volume.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <div class="pill" style="box-shadow:none">
+      <input id="ambientOn" type="checkbox" checked style="transform: translateY(1px)"/>
+      <label for="ambientOn" style="cursor:pointer">on</label>
+    </div>
+    <select id="ambientProfile">
+      <option value="auto" selected>Auto</option>
+      <option value="city">City</option>
+      <option value="ocean">Ocean</option>
+      <option value="market">Market</option>
+      <option value="nature">Nature</option>
+      <option value="off">Off</option>
+    </select>
+    <input id="ambientVol" type="range" min="0" max="0.25" step="0.01" value="0.09" style="width:180px"/>
+    <span class="pill" id="ambientPill" style="box-shadow:none">vol: 0.09</span>
+  </div>
+</div>
+
+<div class="field">
+  <div class="label">Memories</div>
+  <div class="small" style="margin-bottom:10px">Save moments locally on this device.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <button id="btnOpenMemories">View memories</button>
+    <button id="btnClearMemories" class="secondary">Clear</button>
+    <button id="btnSouvenirPdf" class="secondary">Souvenir PDF</button>
+    <span class="pill" id="memPill" style="box-shadow:none">0 saved</span>
+  </div>
+  <div class="small" style="margin-top:10px">Tip: tap ★ Save moment on any stop.</div>
+</div>
+      <button id="btnDoneSettings">Done</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="toast" class="toast" role="status" aria-live="polite"><span id="toastMsg"></span><button id="toastBtn" class="secondary" style="display:none;margin-left:10px;border-radius:999px;padding:6px 10px">Action</button></div>
+
+
+<div id="arrivalCard" class="arrivalCard">
+  <div class="arrivalInner">
+    <h2 id="arrivalTitle"></h2>
+    <p id="arrivalLine"></p>
+  </div>
+</div>
+
+<div id="completionCard" class="arrivalCard">
+  <div class="arrivalInner">
+    <h2>Walk complete</h2>
+    <p id="completionStats"></p>
+    <p class="subtle">Every place has a story.</p>
+  </div>
+</div>
+
+
+<div id="memoriesModal" class="arrivalCard" aria-hidden="true">
+  <div class="arrivalInner" style="text-align:left;max-width:720px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
+      <h2 style="margin:0">Memories</h2>
+      <button id="btnCloseMemories" class="secondary" style="border-radius:999px;padding:8px 12px">✕</button>
+    </div>
+    <div id="memoriesList" style="display:grid;gap:10px"></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;align-items:center">
+      <button id="btnSouvenirPdf">Souvenir PDF</button>
+      <button id="btnExportMemories" class="secondary">Copy export</button>
+      <span class="pill" id="memExportPill" style="box-shadow:none"></span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

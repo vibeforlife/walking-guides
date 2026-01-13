@@ -1,0 +1,28 @@
+{
+  "packs": [
+    {
+      "packId": "sample-pack",
+      "label": "Sample Pack (placeholder tones)",
+      "format": "wav",
+      "files": {
+        "alii-beach": "audio/sample-pack/alii-beach.wav",
+        "aliiolani": "audio/sample-pack/aliiolani.wav",
+        "anahulu-bridge": "audio/sample-pack/anahulu-bridge.wav",
+        "duke": "audio/sample-pack/duke.wav",
+        "haleiwa-town": "audio/sample-pack/haleiwa-town.wav",
+        "iolani": "audio/sample-pack/iolani.wav",
+        "kailua-beach": "audio/sample-pack/kailua-beach.wav",
+        "kailua-town": "audio/sample-pack/kailua-town.wav",
+        "kapiolani": "audio/sample-pack/kapiolani.wav",
+        "kawaiahao": "audio/sample-pack/kawaiahao.wav",
+        "lanikai-beach": "audio/sample-pack/lanikai-beach.wav",
+        "leahi": "audio/sample-pack/leahi.wav",
+        "ph-arizona": "audio/sample-pack/ph-arizona.wav",
+        "ph-lunch": "audio/sample-pack/ph-lunch.wav",
+        "ph-visitor": "audio/sample-pack/ph-visitor.wav",
+        "pillboxes": "audio/sample-pack/pillboxes.wav",
+        "sunset-beach": "audio/sample-pack/sunset-beach.wav"
+      }
+    }
+  ]
+}

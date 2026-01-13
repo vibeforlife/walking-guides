@@ -1,0 +1,1627 @@
+[
+  {
+    "id": "honolulu-waikiki",
+    "name": "Historic Honolulu → Waikīkī → Diamond Head View",
+    "description": "Monarchy + courts + coral church → beach legend → park vibes → iconic crater. A greatest-hits mixtape.",
+    "center": [
+      21.297,
+      -157.848
+    ],
+    "line": [
+      [
+        21.3066,
+        -157.8581
+      ],
+      [
+        21.3065,
+        -157.857
+      ],
+      [
+        21.3088,
+        -157.8556
+      ],
+      [
+        21.2902,
+        -157.842
+      ],
+      [
+        21.2856,
+        -157.8344
+      ],
+      [
+        21.2639,
+        -157.8057
+      ]
+    ],
+    "stops": [
+      {
+        "id": "iolani",
+        "title": "ʻIolani Palace",
+        "location": "Downtown Honolulu",
+        "lat": 21.3066,
+        "lng": -157.8581,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "history",
+          "must-see"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Musubi + iced tea (grab-and-go)",
+            "Downtown plate lunch specials (often <$15)"
+          ],
+          "budgetHint": "Snack now, feast later. Your itinerary doesn’t need to be dramatic."
+        },
+        "funFacts": [
+          "Only royal palace on U.S. soil.",
+          "Early adopter of electric lighting in the 1800s."
+        ],
+        "scriptFile": "scripts/iolani.txt"
+      },
+      {
+        "id": "aliiolani",
+        "title": "Aliʻiōlani Hale & King Kamehameha Statue",
+        "location": "Across from ʻIolani Palace",
+        "lat": 21.3065,
+        "lng": -157.857,
+        "walkFromPrevMin": 3,
+        "tags": [
+          "history",
+          "civic"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Plate lunch specials nearby"
+          ],
+          "budgetHint": "If you see a lunch special, that’s your sign from the universe."
+        },
+        "funFacts": [
+          "Name means “house of heavenly kings.”",
+          "Long tied to Hawaiʻi’s courts."
+        ],
+        "scriptFile": "scripts/aliiolani.txt"
+      },
+      {
+        "id": "kawaiahao",
+        "title": "Kawaiahaʻo Church",
+        "location": "Punchbowl Street",
+        "lat": 21.3088,
+        "lng": -157.8556,
+        "walkFromPrevMin": 6,
+        "tags": [
+          "culture",
+          "history"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Bakery pastry + coffee"
+          ],
+          "budgetHint": "A pastry is valid cultural research."
+        },
+        "funFacts": [
+          "Often nicknamed ‘Hawaiʻi’s Westminster Abbey’.",
+          "Built from thousands of coral slabs."
+        ],
+        "scriptFile": "scripts/kawaiahao.txt"
+      },
+      {
+        "id": "duke",
+        "title": "Duke Kahanamoku Statue (Kūhiō Beach)",
+        "location": "Waikīkī shoreline",
+        "lat": 21.2902,
+        "lng": -157.842,
+        "walkFromPrevMin": 45,
+        "tags": [
+          "beach",
+          "legend"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Shave ice",
+            "Convenience-store snacks"
+          ],
+          "budgetHint": "Shave ice counts as hydration. Don’t @ me."
+        },
+        "funFacts": [
+          "Olympic swimming champion.",
+          "Helped popularize surfing worldwide."
+        ],
+        "scriptFile": "scripts/duke.txt"
+      },
+      {
+        "id": "kapiolani",
+        "title": "Kapiʻolani Park",
+        "location": "Waikīkī’s east end",
+        "lat": 21.2856,
+        "lng": -157.8344,
+        "walkFromPrevMin": 15,
+        "tags": [
+          "park",
+          "relax"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Picnic in the park"
+          ],
+          "budgetHint": "Your wallet loves a picnic. Your knees love shade."
+        },
+        "funFacts": [
+          "Dedicated in 1877.",
+          "Named for Queen Kapiʻolani."
+        ],
+        "scriptFile": "scripts/kapiolani.txt"
+      },
+      {
+        "id": "leahi",
+        "title": "Lēʻahi (Diamond Head) Viewpoint",
+        "location": "Looking toward Diamond Head",
+        "lat": 21.2639,
+        "lng": -157.8057,
+        "walkFromPrevMin": 25,
+        "tags": [
+          "view",
+          "geology"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Post-walk noodles or tacos nearby"
+          ],
+          "budgetHint": "Earn your noodles. You did great."
+        },
+        "funFacts": [
+          "Tuff cone from explosive eruptions.",
+          "‘Diamond’ name came from mistaken crystals."
+        ],
+        "scriptFile": "scripts/leahi.txt"
+      }
+    ],
+    "city": "Oʻahu",
+    "country": "USA"
+  },
+  {
+    "id": "north-shore-haleiwa",
+    "name": "North Shore: Haleʻiwa Stories & Surf",
+    "description": "Food trucks, river turtles, surf legends, and the chillest pace your nervous system has ever met.",
+    "center": [
+      21.61,
+      -158.09
+    ],
+    "line": [
+      [
+        21.5929,
+        -158.103
+      ],
+      [
+        21.5958,
+        -158.1057
+      ],
+      [
+        21.5953,
+        -158.1086
+      ],
+      [
+        21.6646,
+        -158.0537
+      ]
+    ],
+    "stops": [
+      {
+        "id": "haleiwa-town",
+        "title": "Haleʻiwa Town Center",
+        "location": "North Shore gateway town",
+        "lat": 21.5929,
+        "lng": -158.103,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "town",
+          "surf",
+          "food"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Garlic shrimp plates (food trucks)",
+            "Shave ice"
+          ],
+          "budgetHint": "Pick one hero item or accept the nap."
+        },
+        "funFacts": [
+          "North Shore swells peak in winter."
+        ],
+        "scriptFile": "scripts/haleiwa-town.txt"
+      },
+      {
+        "id": "alii-beach",
+        "title": "Haleʻiwa Aliʻi Beach Park",
+        "location": "Beach park & surf watching",
+        "lat": 21.5958,
+        "lng": -158.1057,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "beach",
+          "relax"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Picnic with your food truck plate"
+          ],
+          "budgetHint": "‘Food + ocean view’ with zero cover charge."
+        },
+        "funFacts": [
+          "Great surf watching in season."
+        ],
+        "scriptFile": "scripts/alii-beach.txt"
+      },
+      {
+        "id": "anahulu-bridge",
+        "title": "Anahulu River Bridge",
+        "location": "River lookout",
+        "lat": 21.5953,
+        "lng": -158.1086,
+        "walkFromPrevMin": 6,
+        "tags": [
+          "river",
+          "wildlife"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Iced coffee / fresh juice in town"
+          ],
+          "budgetHint": "Hydration = performance."
+        },
+        "funFacts": [
+          "You may spot honu (sea turtles)."
+        ],
+        "scriptFile": "scripts/anahulu-bridge.txt"
+      },
+      {
+        "id": "sunset-beach",
+        "title": "Sunset Beach (Viewpoint Stop)",
+        "location": "Big-wave shoreline (seasonal)",
+        "lat": 21.6646,
+        "lng": -158.0537,
+        "walkFromPrevMin": 25,
+        "tags": [
+          "beach",
+          "view",
+          "surf"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Simple snacks or plate lunch nearby"
+          ],
+          "budgetHint": "If you find a hearty meal under $15, take the W."
+        },
+        "funFacts": [
+          "Winter swells can be huge offshore."
+        ],
+        "scriptFile": "scripts/sunset-beach.txt"
+      }
+    ],
+    "city": "Oʻahu",
+    "country": "USA"
+  },
+  {
+    "id": "windward-kailua-lanikai",
+    "name": "Windward: Kailua → Lanikai (Optional Pillboxes)",
+    "description": "Breezy beaches, local town energy, optional WWII viewpoints, and maximum ‘I live here now’ feelings.",
+    "center": [
+      21.397,
+      -157.724
+    ],
+    "line": [
+      [
+        21.3936,
+        -157.7406
+      ],
+      [
+        21.3969,
+        -157.7285
+      ],
+      [
+        21.4039,
+        -157.7146
+      ],
+      [
+        21.3939,
+        -157.7124
+      ]
+    ],
+    "stops": [
+      {
+        "id": "kailua-town",
+        "title": "Kailua Town",
+        "location": "Local shops & daily life",
+        "lat": 21.3936,
+        "lng": -157.7406,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "town",
+          "local",
+          "food"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Musubi",
+            "Pastry",
+            "Iced coffee"
+          ],
+          "budgetHint": "Start snacky. Beach decisions are emotional."
+        },
+        "funFacts": [
+          "Trade winds = breezy vibes."
+        ],
+        "scriptFile": "scripts/kailua-town.txt"
+      },
+      {
+        "id": "kailua-beach",
+        "title": "Kailua Beach Park",
+        "location": "Wide beach + calm water vibes",
+        "lat": 21.3969,
+        "lng": -157.7285,
+        "walkFromPrevMin": 12,
+        "tags": [
+          "beach",
+          "relax"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Park picnic"
+          ],
+          "budgetHint": "Bring water + snacks. Future-you will be smug."
+        },
+        "funFacts": [
+          "Frequently ranked among top beaches."
+        ],
+        "scriptFile": "scripts/kailua-beach.txt"
+      },
+      {
+        "id": "pillboxes",
+        "title": "Lanikai Pillboxes (Optional Viewpoint)",
+        "location": "Short hike for panoramic views",
+        "lat": 21.4039,
+        "lng": -157.7146,
+        "walkFromPrevMin": 18,
+        "tags": [
+          "view",
+          "hike",
+          "wwii"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Bring water + a granola bar"
+          ],
+          "budgetHint": "No vendors up here. Pack snacks like a responsible legend."
+        },
+        "funFacts": [
+          "WWII-era observation structures."
+        ],
+        "scriptFile": "scripts/pillboxes.txt"
+      },
+      {
+        "id": "lanikai-beach",
+        "title": "Lanikai Beach",
+        "location": "Postcard water + Mokulua Islands view",
+        "lat": 21.3939,
+        "lng": -157.7124,
+        "walkFromPrevMin": 20,
+        "tags": [
+          "beach",
+          "view"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Snack quietly (leave no trace)"
+          ],
+          "budgetHint": "Keep it simple: water + snack + respectful vibes."
+        },
+        "funFacts": [
+          "Views toward the Mokulua Islands (“the Mokes”)."
+        ],
+        "scriptFile": "scripts/lanikai-beach.txt"
+      }
+    ],
+    "city": "Oʻahu",
+    "country": "USA"
+  },
+  {
+    "id": "pearl-harbor-reflections",
+    "name": "Pearl Harbor & ʻEwa Reflections",
+    "description": "A respectful, story-forward walk with space to breathe afterward (plus a low-key comfort-food stop).",
+    "center": [
+      21.366,
+      -157.943
+    ],
+    "line": [
+      [
+        21.3679,
+        -157.9386
+      ],
+      [
+        21.3656,
+        -157.95
+      ],
+      [
+        21.3635,
+        -157.9555
+      ]
+    ],
+    "stops": [
+      {
+        "id": "ph-visitor",
+        "title": "Pearl Harbor Visitor Area",
+        "location": "Visitor orientation",
+        "lat": 21.3679,
+        "lng": -157.9386,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "history",
+          "reflection"
+        ],
+        "tone": "serious",
+        "cheapEats": {
+          "nearby": [
+            "Bring water; keep it simple"
+          ],
+          "budgetHint": "This is a ‘quiet mind’ stop. Food can wait 20 minutes."
+        },
+        "funFacts": [
+          "Pearl Harbor is also called Puʻuloa."
+        ],
+        "scriptFile": "scripts/ph-visitor.txt"
+      },
+      {
+        "id": "ph-arizona",
+        "title": "USS Arizona Memorial Area",
+        "location": "Memorial viewpoint",
+        "lat": 21.3656,
+        "lng": -157.95,
+        "walkFromPrevMin": 12,
+        "tags": [
+          "history",
+          "reflection"
+        ],
+        "tone": "serious",
+        "cheapEats": {
+          "nearby": [
+            "Take a pause before eating"
+          ],
+          "budgetHint": "If you need a moment, take it. That’s the right move."
+        },
+        "funFacts": [
+          "Many visitors describe a quiet stillness here."
+        ],
+        "scriptFile": "scripts/ph-arizona.txt"
+      },
+      {
+        "id": "ph-lunch",
+        "title": "ʻEwa Comfort-Food Reset Stop",
+        "location": "Nearby decompression + budget bites",
+        "lat": 21.3635,
+        "lng": -157.9555,
+        "walkFromPrevMin": 15,
+        "tags": [
+          "food",
+          "reset"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Saimin (local noodle soup)",
+            "Bento plates",
+            "Onigiri/musubi"
+          ],
+          "budgetHint": "Comfort food is not ‘unserious.’ It’s how humans recover."
+        },
+        "funFacts": [
+          "Local comfort foods reflect many cultures."
+        ],
+        "scriptFile": "scripts/ph-lunch.txt"
+      }
+    ],
+    "city": "Oʻahu",
+    "country": "USA"
+  },
+  {
+    "id": "toronto-downtown-core",
+    "city": "Toronto",
+    "country": "Canada",
+    "name": "Downtown Toronto: Old Town → Waterfront",
+    "description": "Foundations, power, rebellion, skyline, and lake breeze.",
+    "center": [
+      43.6515,
+      -79.3839
+    ],
+    "line": [
+      [
+        43.6532,
+        -79.3832
+      ],
+      [
+        43.6503,
+        -79.3849
+      ],
+      [
+        43.6469,
+        -79.3806
+      ],
+      [
+        43.6405,
+        -79.3807
+      ]
+    ],
+    "stops": [
+      {
+        "id": "stlawrence",
+        "title": "St. Lawrence Market Area",
+        "lat": 43.6532,
+        "lng": -79.3832,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "history",
+          "food"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Peameal bacon sandwich"
+          ],
+          "budgetHint": "One sandwich can be a full meal."
+        },
+        "scriptFile": "scripts/toronto-stlawrence.txt"
+      },
+      {
+        "id": "oldcityhall",
+        "title": "Old City Hall",
+        "lat": 43.6503,
+        "lng": -79.3849,
+        "walkFromPrevMin": 6,
+        "tags": [
+          "architecture",
+          "history"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Food court snacks"
+          ],
+          "budgetHint": "Eat after."
+        },
+        "scriptFile": "scripts/toronto-oldcityhall.txt"
+      },
+      {
+        "id": "distillery",
+        "title": "Distillery District",
+        "lat": 43.6469,
+        "lng": -79.3806,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "industrial",
+          "culture"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Street snacks"
+          ],
+          "budgetHint": "Daytime is cheaper."
+        },
+        "scriptFile": "scripts/toronto-distillery.txt"
+      },
+      {
+        "id": "harbourfront",
+        "title": "Harbourfront & Lake Ontario",
+        "lat": 43.6405,
+        "lng": -79.3807,
+        "walkFromPrevMin": 15,
+        "tags": [
+          "nature",
+          "view"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Food trucks"
+          ],
+          "budgetHint": "Lake views are free."
+        },
+        "scriptFile": "scripts/toronto-harbourfront.txt"
+      }
+    ]
+  },
+  {
+    "id": "ist-sultanahmet-empires",
+    "name": "Sultanahmet: Empires in 3 Hours",
+    "description": "A greatest-hits walk through Istanbul’s iconic old city—Byzantine, Ottoman, and everything in between.",
+    "center": [
+      41.006833,
+      28.976844
+    ],
+    "line": [
+      [
+        41.0038,
+        28.9722
+      ],
+      [
+        41.00417,
+        28.97266
+      ],
+      [
+        41.0054,
+        28.9768
+      ],
+      [
+        41.0086,
+        28.9802
+      ],
+      [
+        41.0084,
+        28.9779
+      ],
+      [
+        41.0115,
+        28.9833
+      ],
+      [
+        41.0127,
+        28.9805
+      ],
+      [
+        41.00523,
+        28.978232
+      ],
+      [
+        41.0017,
+        28.9698
+      ]
+    ],
+    "stops": [
+      {
+        "id": "ist-sultanahmet-empires-hippodrome",
+        "title": "Hippodrome & Obelisks",
+        "location": "Sultanahmet Square",
+        "lat": 41.0038,
+        "lng": 28.9722,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "history",
+          "byzantine",
+          "must-see"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Roasted chestnuts (seasonal)",
+            "Simit + ayran from a street vendor"
+          ],
+          "budgetHint": "Snacks are strategy. Your future self will thank you."
+        },
+        "funFacts": [
+          "This was the stadium of Constantinople—chariot races, riots, and royal drama.",
+          "Several monuments here were moved from across the ancient world."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-hippodrome.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-german-fountain",
+        "title": "German Fountain",
+        "location": "Northern Sultanahmet Square",
+        "lat": 41.00417,
+        "lng": 28.97266,
+        "walkFromPrevMin": 4,
+        "tags": [
+          "history",
+          "architecture"
+        ],
+        "tone": "fun",
+        "funFacts": [
+          "Built in Germany, shipped in pieces, assembled here in 1900.",
+          "Look up: the dome’s interior glints with gold mosaics."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-german-fountain.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-blue-mosque",
+        "title": "Blue Mosque (Sultan Ahmed Mosque)",
+        "location": "Sultanahmet",
+        "lat": 41.0054,
+        "lng": 28.9768,
+        "walkFromPrevMin": 3,
+        "tags": [
+          "must-see",
+          "architecture",
+          "ottoman"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Lokma (fried dough bites) nearby",
+            "Fresh pomegranate juice stands"
+          ],
+          "budgetHint": "Hydrate like a pro. Istanbul walking is an extreme sport."
+        },
+        "funFacts": [
+          "It’s famous for its interior blue İznik tiles.",
+          "Built in the early 1600s, it was a statement of imperial confidence."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-blue-mosque.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-hagia-sophia",
+        "title": "Hagia Sophia",
+        "location": "Sultanahmet",
+        "lat": 41.0086,
+        "lng": 28.9802,
+        "walkFromPrevMin": 6,
+        "tags": [
+          "must-see",
+          "history",
+          "byzantine",
+          "architecture"
+        ],
+        "tone": "fun",
+        "funFacts": [
+          "For nearly 1,000 years it was the largest cathedral in the world.",
+          "Its dome inspired centuries of architecture around the region."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-hagia-sophia.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-basilica-cistern",
+        "title": "Basilica Cistern",
+        "location": "Sultanahmet",
+        "lat": 41.0084,
+        "lng": 28.9779,
+        "walkFromPrevMin": 5,
+        "tags": [
+          "history",
+          "underground",
+          "must-see"
+        ],
+        "tone": "fun",
+        "funFacts": [
+          "An underground water reservoir supported by rows of columns.",
+          "Keep an eye out for the Medusa-head stone blocks."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-basilica-cistern.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-topkapi-gate",
+        "title": "Topkapı Palace First Courtyard",
+        "location": "Sarayburnu",
+        "lat": 41.0115,
+        "lng": 28.9833,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "history",
+          "ottoman",
+          "must-see"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Tea in the palace gardens area",
+            "Corn-on-the-cob vendors by the entrances"
+          ],
+          "budgetHint": "A tea break is not quitting—it’s tactical recharging."
+        },
+        "funFacts": [
+          "This was the center of Ottoman power for centuries.",
+          "Palace life ran on protocol, secrecy, and dazzling craft."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-topkapi-gate.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-gulhane-park",
+        "title": "Gülhane Park",
+        "location": "Adjacent to Topkapı Palace",
+        "lat": 41.0127,
+        "lng": 28.9805,
+        "walkFromPrevMin": 6,
+        "tags": [
+          "nature",
+          "views",
+          "break"
+        ],
+        "tone": "calm",
+        "cheapEats": {
+          "nearby": [
+            "Tea + simit in the park cafes"
+          ],
+          "budgetHint": "Sit. Sip. Pretend you’re in a historical drama montage."
+        },
+        "funFacts": [
+          "One of Istanbul’s oldest public parks.",
+          "It sits on land that once belonged to the palace grounds."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-gulhane-park.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-arasta-bazaar",
+        "title": "Arasta Bazaar & Mosaic Museum Area",
+        "location": "Behind the Blue Mosque",
+        "lat": 41.00523,
+        "lng": 28.978232,
+        "walkFromPrevMin": 12,
+        "tags": [
+          "shopping",
+          "culture",
+          "souvenir"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Gözleme (stuffed flatbread)",
+            "Çay (tea) in a tiny shop courtyard"
+          ],
+          "budgetHint": "Browse first, buy last. Your bargaining game improves with confidence."
+        },
+        "funFacts": [
+          "A smaller, calmer alternative to the Grand Bazaar.",
+          "The Great Palace Mosaic Museum is nearby inside the bazaar area."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-arasta-bazaar.txt"
+      },
+      {
+        "id": "ist-sultanahmet-empires-little-hagia-sophia",
+        "title": "Little Hagia Sophia",
+        "location": "Küçük Ayasofya",
+        "lat": 41.0017,
+        "lng": 28.9698,
+        "walkFromPrevMin": 15,
+        "tags": [
+          "history",
+          "byzantine",
+          "quiet"
+        ],
+        "tone": "calm",
+        "cheapEats": {
+          "nearby": [
+            "Lentil soup (mercimek) at a neighborhood lokanta"
+          ],
+          "budgetHint": "This is your ‘locals’ corner’—simple food, big comfort."
+        },
+        "funFacts": [
+          "Originally a 6th‑century Byzantine church of Saints Sergius and Bacchus.",
+          "Often described as a ‘prototype’ for the Hagia Sophia’s dome ideas."
+        ],
+        "scriptFile": "scripts/ist-sultanahmet-empires-little-hagia-sophia.txt"
+      }
+    ],
+    "city": "Istanbul",
+    "country": "Turkey"
+  },
+  {
+    "id": "ist-bazaars-mosques",
+    "name": "Bazaars & Domes: Eminönü to Grand Bazaar",
+    "description": "Spices, tiles, skyline domes, and the city’s most famous markets—classic Istanbul street energy.",
+    "center": [
+      41.0146,
+      28.968622
+    ],
+    "line": [
+      [
+        41.017183,
+        28.975778
+      ],
+      [
+        41.01695,
+        28.9699
+      ],
+      [
+        41.0098,
+        28.969
+      ],
+      [
+        41.0167,
+        28.9703
+      ],
+      [
+        41.02,
+        28.9731
+      ],
+      [
+        41.0161,
+        28.9638
+      ],
+      [
+        41.013806,
+        28.957164
+      ],
+      [
+        41.010658,
+        28.968058
+      ],
+      [
+        41.0102,
+        28.9705
+      ]
+    ],
+    "stops": [
+      {
+        "id": "ist-bazaars-mosques-eminonu-square",
+        "title": "Eminönü Square",
+        "location": "Eminönü",
+        "lat": 41.017183,
+        "lng": 28.975778,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "local-life",
+          "views",
+          "transport"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Balık ekmek (fish sandwich) by the water",
+            "Roasted corn or chestnuts"
+          ],
+          "budgetHint": "Eat where locals line up. That’s your best map."
+        },
+        "funFacts": [
+          "This is a major ferry hub—people-watching is elite here.",
+          "You’re at the edge of the Golden Horn and the old city."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-eminonu-square.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-yeni-mosque",
+        "title": "New Mosque (Yeni Cami)",
+        "location": "Eminönü",
+        "lat": 41.01695,
+        "lng": 28.9699,
+        "walkFromPrevMin": 4,
+        "tags": [
+          "architecture",
+          "ottoman"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "Its courtyard feels like a pause button amid the market rush.",
+          "It anchors the waterfront skyline near the bazaar district."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-yeni-mosque.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-spice-bazaar",
+        "title": "Spice Bazaar (Mısır Çarşısı)",
+        "location": "Eminönü",
+        "lat": 41.0098,
+        "lng": 28.969,
+        "walkFromPrevMin": 3,
+        "tags": [
+          "food",
+          "shopping",
+          "local-life"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Turkish delight samples (yes, count them as calories)",
+            "Pick up dried fruit/nuts for the walk"
+          ],
+          "budgetHint": "Buy a small mix, not a giant bag. Your luggage has feelings."
+        },
+        "funFacts": [
+          "Known for spices, teas, sweets, and fragrant chaos.",
+          "Even if you buy nothing, the smells are the souvenir."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-spice-bazaar.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-rustem-pasha",
+        "title": "Rüstem Pasha Mosque",
+        "location": "Tahtakale",
+        "lat": 41.0167,
+        "lng": 28.9703,
+        "walkFromPrevMin": 6,
+        "tags": [
+          "architecture",
+          "tiles",
+          "hidden-gem"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "Famous for vivid İznik tiles.",
+          "Tucked above market streets—like a secret level."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-rustem-pasha.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-galata-bridge",
+        "title": "Galata Bridge Viewpoint",
+        "location": "Golden Horn crossing",
+        "lat": 41.02,
+        "lng": 28.9731,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "views",
+          "photo"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Balık ekmek stands nearby",
+            "Fresh-squeezed juice"
+          ],
+          "budgetHint": "Split one sandwich. Save room for later snacks."
+        },
+        "funFacts": [
+          "Fishermen often line the railings.",
+          "One side looks to the historic peninsula; the other to Galata and Beyoğlu."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-galata-bridge.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-suleymaniye",
+        "title": "Süleymaniye Mosque & Courtyard",
+        "location": "Süleymaniye",
+        "lat": 41.0161,
+        "lng": 28.9638,
+        "walkFromPrevMin": 18,
+        "tags": [
+          "must-see",
+          "architecture",
+          "ottoman"
+        ],
+        "tone": "calm",
+        "cheapEats": {
+          "nearby": [
+            "Simple lokanta meals in the surrounding streets"
+          ],
+          "budgetHint": "Order soup + one main. Istanbul portions are generous."
+        },
+        "funFacts": [
+          "Designed by Mimar Sinan for Süleiman the Magnificent.",
+          "The terraces offer some of the best skyline views."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-suleymaniye.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-sehzade-mosque",
+        "title": "Şehzade Mosque",
+        "location": "Fatih",
+        "lat": 41.013806,
+        "lng": 28.957164,
+        "walkFromPrevMin": 14,
+        "tags": [
+          "architecture",
+          "sinan"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "Commissioned by Süleiman as a memorial to his son.",
+          "Often called one of Sinan’s early masterpieces."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-sehzade-mosque.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-grand-bazaar",
+        "title": "Grand Bazaar (Kapalıçarşı)",
+        "location": "Beyazıt / Çemberlitaş",
+        "lat": 41.010658,
+        "lng": 28.968058,
+        "walkFromPrevMin": 16,
+        "tags": [
+          "shopping",
+          "must-see",
+          "local-life"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Çay in a tiny shop (often offered)",
+            "Börek for a quick bite"
+          ],
+          "budgetHint": "Accept tea if offered—just don’t feel obligated to buy."
+        },
+        "funFacts": [
+          "One of the world’s oldest and largest covered markets.",
+          "It’s basically a city inside a city."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-grand-bazaar.txt"
+      },
+      {
+        "id": "ist-bazaars-mosques-nuruosmaniye",
+        "title": "Nuruosmaniye Mosque (Bazaar Gate)",
+        "location": "Çemberlitaş",
+        "lat": 41.0102,
+        "lng": 28.9705,
+        "walkFromPrevMin": 5,
+        "tags": [
+          "architecture",
+          "baroque",
+          "finish"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "Notable Ottoman Baroque style—different vibe from earlier domes.",
+          "Sits right by a major entrance to the Grand Bazaar."
+        ],
+        "scriptFile": "scripts/ist-bazaars-mosques-nuruosmaniye.txt"
+      }
+    ],
+    "city": "Istanbul",
+    "country": "Turkey"
+  },
+  {
+    "id": "ist-galata-beyoglu",
+    "name": "Galata & Beyoğlu: Towers, Tram Bells, and Street Life",
+    "description": "From waterfront Karaköy up to Galata Tower, then along İstiklal to Taksim—cafés, culture, and big-city Istanbul.",
+    "center": [
+      41.030033,
+      28.976626
+    ],
+    "line": [
+      [
+        41.023,
+        28.974
+      ],
+      [
+        41.02,
+        28.9731
+      ],
+      [
+        41.025658,
+        28.974155
+      ],
+      [
+        41.028469,
+        28.974041
+      ],
+      [
+        41.0314,
+        28.9718
+      ],
+      [
+        41.0337,
+        28.9734
+      ],
+      [
+        41.0325,
+        28.9764
+      ],
+      [
+        41.036945,
+        28.985832
+      ],
+      [
+        41.038628,
+        28.986909
+      ]
+    ],
+    "stops": [
+      {
+        "id": "ist-galata-beyoglu-karakoy",
+        "title": "Karaköy Waterfront",
+        "location": "Karaköy",
+        "lat": 41.023,
+        "lng": 28.974,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "local-life",
+          "cafes",
+          "start"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Simit + tea",
+            "Street-style döner"
+          ],
+          "budgetHint": "Breakfast counts as sightseeing if you eat it outside with a view."
+        },
+        "funFacts": [
+          "Karaköy is a historic port district that’s become a café-and-gallery hotspot.",
+          "You’re at the foot of the hill leading up to Galata and Beyoğlu."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-karakoy.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-galata-bridge-2",
+        "title": "Galata Bridge (Under-bridge Energy)",
+        "location": "Golden Horn",
+        "lat": 41.02,
+        "lng": 28.9731,
+        "walkFromPrevMin": 8,
+        "tags": [
+          "views",
+          "food"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Balık ekmek nearby",
+            "Tea stands under/near the bridge"
+          ],
+          "budgetHint": "Eat one thing, keep walking. This tour is cardio-with-benefits."
+        },
+        "funFacts": [
+          "The bridge is famous for fishermen above and eateries below.",
+          "It links the old city vibes with the newer Galata side."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-galata-bridge-2.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-galata-tower",
+        "title": "Galata Tower",
+        "location": "Galata",
+        "lat": 41.025658,
+        "lng": 28.974155,
+        "walkFromPrevMin": 12,
+        "tags": [
+          "must-see",
+          "views",
+          "history"
+        ],
+        "tone": "fun",
+        "funFacts": [
+          "Originally a medieval Genoese tower (14th century).",
+          "Its viewpoint is one of the city’s classics."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-galata-tower.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-tunel-square",
+        "title": "Tünel Square & Historic Funicular",
+        "location": "Beyoğlu",
+        "lat": 41.028469,
+        "lng": 28.974041,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "history",
+          "transport",
+          "quirky"
+        ],
+        "tone": "fun",
+        "funFacts": [
+          "The Tünel (1875) is among the world’s oldest underground urban railways.",
+          "It solves a problem: this hill is steep."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-tunel-square.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-pera-museum",
+        "title": "Pera Museum Area",
+        "location": "Tepebaşı / Pera",
+        "lat": 41.0314,
+        "lng": 28.9718,
+        "walkFromPrevMin": 12,
+        "tags": [
+          "culture",
+          "museum"
+        ],
+        "tone": "calm",
+        "cheapEats": {
+          "nearby": [
+            "Turkish coffee in a side-street café"
+          ],
+          "budgetHint": "Coffee here is a ritual. Give it five calm minutes."
+        },
+        "funFacts": [
+          "Pera was historically the ‘European’ quarter of the city.",
+          "This area is packed with galleries, cafés, and old passageways."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-pera-museum.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-cicek-pasaji",
+        "title": "Çiçek Pasajı (Flower Passage)",
+        "location": "İstiklal Avenue",
+        "lat": 41.0337,
+        "lng": 28.9734,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "food",
+          "architecture",
+          "street-life"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Meze-sharing if you sit down",
+            "Quick roasted nuts from vendors outside"
+          ],
+          "budgetHint": "If you sit, share plates. Your wallet will breathe easier."
+        },
+        "funFacts": [
+          "A historic arcade passage with restaurants and a lively atmosphere.",
+          "One of İstiklal’s most recognizable interior ‘streets’."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-cicek-pasaji.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-st-antoine",
+        "title": "St. Antoine Church",
+        "location": "İstiklal Avenue",
+        "lat": 41.0325,
+        "lng": 28.9764,
+        "walkFromPrevMin": 6,
+        "tags": [
+          "history",
+          "culture"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "A landmark Catholic church on bustling İstiklal.",
+          "Step inside for a quiet reset."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-st-antoine.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-taksim-square",
+        "title": "Taksim Square",
+        "location": "Taksim",
+        "lat": 41.036945,
+        "lng": 28.985832,
+        "walkFromPrevMin": 15,
+        "tags": [
+          "must-see",
+          "modern",
+          "finish"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Roasted corn/chestnuts",
+            "Water + snack kiosks"
+          ],
+          "budgetHint": "Hydrate now. Your feet have unionized."
+        },
+        "funFacts": [
+          "Often called the heart of modern Istanbul.",
+          "A major transport and gathering point."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-taksim-square.txt"
+      },
+      {
+        "id": "ist-galata-beyoglu-gezi-park",
+        "title": "Gezi Park (Cool-down)",
+        "location": "Next to Taksim",
+        "lat": 41.038628,
+        "lng": 28.986909,
+        "walkFromPrevMin": 3,
+        "tags": [
+          "nature",
+          "break",
+          "finish"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "One of the last green pockets in central Beyoğlu.",
+          "A small park with a big place in recent history."
+        ],
+        "scriptFile": "scripts/ist-galata-beyoglu-gezi-park.txt"
+      }
+    ],
+    "city": "Istanbul",
+    "country": "Turkey"
+  },
+  {
+    "id": "ist-fener-balat",
+    "name": "Fener & Balat: Colorful Streets on the Golden Horn",
+    "description": "A slower, neighborhood-forward walk: viewpoints, courtyards, colorful stair streets, and layers of community history.",
+    "center": [
+      41.029171,
+      28.946038
+    ],
+    "line": [
+      [
+        41.0275,
+        28.9485
+      ],
+      [
+        41.02417,
+        28.951
+      ],
+      [
+        41.029,
+        28.949
+      ],
+      [
+        41.0328,
+        28.9456
+      ],
+      [
+        41.0323,
+        28.945
+      ],
+      [
+        41.0253,
+        28.9368
+      ],
+      [
+        41.0318,
+        28.9446
+      ],
+      [
+        41.0305,
+        28.9478
+      ]
+    ],
+    "stops": [
+      {
+        "id": "ist-fener-balat-fener-pier",
+        "title": "Golden Horn Waterfront Start",
+        "location": "Fener / Balat waterfront",
+        "lat": 41.0275,
+        "lng": 28.9485,
+        "walkFromPrevMin": 0,
+        "tags": [
+          "views",
+          "start"
+        ],
+        "tone": "calm",
+        "cheapEats": {
+          "nearby": [
+            "Tea at a waterfront café",
+            "Simit from a kiosk"
+          ],
+          "budgetHint": "Start with tea. This tour is meant to be un-rushed."
+        },
+        "funFacts": [
+          "The Golden Horn is a natural harbor that shaped Istanbul’s growth.",
+          "Neighborhood life here feels different from the big-ticket center."
+        ],
+        "scriptFile": "scripts/ist-fener-balat-fener-pier.txt"
+      },
+      {
+        "id": "ist-fener-balat-ecumenical-patriarchate",
+        "title": "Ecumenical Patriarchate (Phanar)",
+        "location": "Fener",
+        "lat": 41.02417,
+        "lng": 28.951,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "history",
+          "culture"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "A historic center of Eastern Orthodox Christianity.",
+          "The area is also known as Phanar (Fener)."
+        ],
+        "scriptFile": "scripts/ist-fener-balat-ecumenical-patriarchate.txt"
+      },
+      {
+        "id": "ist-fener-balat-fener-greek-high-school",
+        "title": "Fener Greek Orthodox College (Red School)",
+        "location": "Fener",
+        "lat": 41.029,
+        "lng": 28.949,
+        "walkFromPrevMin": 12,
+        "tags": [
+          "architecture",
+          "photo"
+        ],
+        "tone": "fun",
+        "funFacts": [
+          "Famous for its striking red-brick façade.",
+          "One of the neighborhood’s most photographed landmarks."
+        ],
+        "scriptFile": "scripts/ist-fener-balat-fener-greek-high-school.txt"
+      },
+      {
+        "id": "ist-fener-balat-balat-streets",
+        "title": "Balat Colorful Streets",
+        "location": "Balat",
+        "lat": 41.0328,
+        "lng": 28.9456,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "street-life",
+          "photo",
+          "neighborhood"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Börek from a local bakery",
+            "Turkish coffee"
+          ],
+          "budgetHint": "This is the ‘small café’ zone—one drink buys you a perfect rest."
+        },
+        "funFacts": [
+          "Balat is known for colorful houses, cafés, and layered community history.",
+          "It’s best enjoyed slowly—watch for cats, murals, and tiny courtyards."
+        ],
+        "scriptFile": "scripts/ist-fener-balat-balat-streets.txt"
+      },
+      {
+        "id": "ist-fener-balat-merdivenli-yokus",
+        "title": "Merdivenli Yokuş Steps View",
+        "location": "Balat",
+        "lat": 41.0323,
+        "lng": 28.945,
+        "walkFromPrevMin": 5,
+        "tags": [
+          "photo",
+          "views"
+        ],
+        "tone": "fun",
+        "funFacts": [
+          "A classic photo spot: steep steps framed by bright buildings.",
+          "The real charm is the everyday life around it."
+        ],
+        "scriptFile": "scripts/ist-fener-balat-merdivenli-yokus.txt"
+      },
+      {
+        "id": "ist-fener-balat-kariye",
+        "title": "Chora Church (Kariye)",
+        "location": "Edirnekapı",
+        "lat": 41.0253,
+        "lng": 28.9368,
+        "walkFromPrevMin": 18,
+        "tags": [
+          "history",
+          "byzantine",
+          "art"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "Renowned for extraordinary Byzantine mosaics and frescoes.",
+          "A bit farther out—worth it if you love art and quiet."
+        ],
+        "scriptFile": "scripts/ist-fener-balat-kariye.txt"
+      },
+      {
+        "id": "ist-fener-balat-coffee-break",
+        "title": "Neighborhood Tea & Coffee Stop",
+        "location": "Balat cafés",
+        "lat": 41.0318,
+        "lng": 28.9446,
+        "walkFromPrevMin": 20,
+        "tags": [
+          "food",
+          "break"
+        ],
+        "tone": "fun",
+        "cheapEats": {
+          "nearby": [
+            "Çay (tea)",
+            "Turkish coffee + a small sweet"
+          ],
+          "budgetHint": "Order one drink, share one sweet. Perfect Istanbul math."
+        },
+        "funFacts": [
+          "In Istanbul, tea breaks are part of the itinerary—always.",
+          "Neighborhood cafés are where the city feels most ‘real.’"
+        ],
+        "scriptFile": "scripts/ist-fener-balat-coffee-break.txt"
+      },
+      {
+        "id": "ist-fener-balat-golden-horn-view",
+        "title": "Golden Horn Viewpoint Finish",
+        "location": "Golden Horn",
+        "lat": 41.0305,
+        "lng": 28.9478,
+        "walkFromPrevMin": 10,
+        "tags": [
+          "views",
+          "finish"
+        ],
+        "tone": "calm",
+        "funFacts": [
+          "The Golden Horn curves like a comma between neighborhoods.",
+          "Sunset here can be unreal on a clear day."
+        ],
+        "scriptFile": "scripts/ist-fener-balat-golden-horn-view.txt"
+      }
+    ],
+    "city": "Istanbul",
+    "country": "Turkey"
+  }
+]
